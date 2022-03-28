@@ -1,0 +1,139 @@
+/* waybar style.css */
+
+@import 'colors.css';
+
+* {
+	border: none;
+	border-radius: 0;
+	font-family: "MonoLisa Regular";
+	font-size: 20px;
+}
+
+window#waybar {
+background: rgba(11, 11, 11, 0.6);
+	/*background: transparent;*/
+}
+
+#workspaces button {
+	font-weight: bold;
+	font-size: 20px;
+	color: #ffffff;
+}
+
+#workspaces button.visible {
+	color: #ffffff;
+}
+
+#workspaces button.focused {
+	background: #ffffff;
+	color: #000000;
+}
+
+#workspaces button:hover {
+	background: @hover;
+	box-shadow: inherit;
+}
+
+#workspaces button.focused:hover {
+	background: rgba(215, 10, 83, 0.8);
+	box-shadow: inherit;
+}
+
+#custom-cap-left {
+	font-size: 28px;
+	color: @bgcolor;
+	padding-left: 10px;
+	padding-right: 5px;
+	color: #999999;
+}
+
+#custom-cap-right {
+	font-size: 28px;
+	color: @bgcolor;
+	padding-left: 5px;
+	padding-right: 10px;
+	color: #999999;
+	background: transparent;
+}
+
+#cpu, 
+#temperature, 
+#memory, 
+#pulseaudio, 
+#battery, 
+#disk,
+#keyboard-state,
+#bluetooth {
+	color: #666666;
+	padding-left: 15px;
+	padding-right: 15px;
+	font-size: 20;
+}
+
+#window {
+	color: #dddddd;
+	background: rgba(11, 11, 11, 0.5);
+/*	background-color: transparent;*/
+	padding-left: 0px;
+	padding-right: 0px;
+	font-family: "FlareSidhe";
+	font-size: 24;
+}
+
+#network {
+	color: @network;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+#clock {
+	color: @clock;
+	padding-left: 10px;
+	padding-right: 25px;
+	font-size: 26;
+}
+
+#disk {
+	color: @disk;
+	padding-left: 50px;
+	padding-right: 10px;
+}
+
+#temperature.critical {                                                           
+	background-color: @critical;                                                    
+}
+
+#idle_inhibitor {
+	color: #993399;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+@keyframes blink1 {                                                                
+		to {
+			background-color: @charging;
+			color: @fgcolor;
+		}
+}
+#battery.charging:not(.full) {
+  color: @fgcolor;
+	animation-name: blink1;                                                          
+	animation-duration: 0.5s;                                                       
+	animation-timing-function: linear;                                              
+	animation-iteration-count: infinite;                                            
+	animation-direction: alternate;
+}
+
+@keyframes blink2 {
+    to {
+        background-color: @critical;
+        color: @fgcolor;
+    }
+}
+#battery.critical:not(.charging) {
+  color: @fgcolor;
+  animation-name: blink2;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}

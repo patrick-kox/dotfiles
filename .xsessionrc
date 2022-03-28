@@ -1,0 +1,5 @@
+export _JAVA_AWT_WM_NONREPARENTING=1
+export LIBRARY_PATH=/usr/local/lib
+export C_INCLUDE_PATH=/usr/local/include
+export LD_LIBRARY_PATH=/usr/local/lib
+export PATH=/opt/cmake-3.20.5/bin:$PATH

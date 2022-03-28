@@ -1,0 +1,151 @@
+{
+// waybar config
+
+"layer": "top",
+"position": "top",
+"modules-left": ["idle_inhibitor","sway/workspaces"],
+"modules-center": ["custom/cap-left", "sway/window", "custom/cap-right"],
+"modules-right": ["network", "cpu", "temperature", "memory", "battery", "pulseaudio", "keyboard-state", "bluetooth","backlight", "clock"],
+"sway/window": {
+	"tooltip": true
+},
+  "backlight": {
+      "device": "intel_backlight",
+      "format": "{percent}% {icon}",
+      "tooltip": true,
+      "format-icons": ["", ""]
+  },
+"keyboard-state": {
+   "numlock": true,
+   "capslock": true,
+   "tooltip": true,
+   "format": "{name} {icon}",
+   "format-icons": {
+   "locked": "",
+   "unlocked": ""
+   }
+},
+  "bluetooth": {
+  	"format": "{icon}",
+  	"tooltip": true,
+  	"format-alt": "bluetooth: {status}",
+  	"format-icons": {
+  		"enabled": "",
+  		"disabled": ""
+  	},
+  	"tooltip-format": "{}"
+  },
+    "disk": {
+  	"interval": 30,
+  	"tooltip": true,
+  	"format": "{free} free on {path}",
+  },
+    "sway/window": {
+      "format": "{}",
+      "tooltip": true,
+      "max-length": 100,
+      "rewrite": {
+        "(.*) - Mozilla Firefox": "🌎 $1",
+        "(.*) - fish": "> [$1]"
+      }
+  },
+ "battery": {
+  "min-length": 6,
+  "states": {
+  "full": 95,
+  "warning": 30,
+  "critical": 20,
+  },
+  "tooltip": true,
+  "full-at": 90,
+  "format-plugged": " {capacity}%",
+  "format-charging": " {capacity}%",
+  "format": "{icon} {capacity}%",
+  "format-icons": ["", "", "", "", ""],
+  "format-time": "{H}h:{M}m",
+},
+"clock": {
+  "interval": 1,
+  "format": " {:%a %b %d %H:%M:%S}",
+  "tooltip": true,
+  "min-length": 18,
+},
+"network": {
+  "interval": 1,
+  "format-wifi": " {essid}",
+  "format-ethernet": " ({bandwidthUpBits} / {bandwidthDownBits})",
+  "format-linked": " {ifname}",
+  "format-disconnected": " Disconnected",
+  "tooltip": false,
+  "max-length": 30,
+  "min-length": 10,
+},
+"pulseaudio": {
+  "tooltip": true,
+  "min-length": 7,
+  "format": "{icon} {volume}%",
+  "format-bluetooth": "{icon} {volume}%",
+  "format-muted": "MUTE",
+  "format-icons": {
+  "headphone": "",
+  "headset": "",
+  "default": ["", "", ""],
+  },
+  "on-click": "pamixer -t",
+  "on-click-right": "pavucontrol",
+},
+"idle_inhibitor": {
+  "tooltip": true,
+  "min-length": 3,
+	"format": "{icon}",
+	"format-icons": {
+	"activated": "",
+	"deactivated": "",
+  },
+},
+  "wlr/taskbar": {
+  	"format": "{icon}",
+  	"tooltip": true,
+  	"icon-size": 14,
+  	"icon-theme": "Numix-Circle",
+  	"tooltip-format": "{title}",
+  	"on-click": "activate",
+  	"on-click-middle": "close",
+  	"ignore-list": [
+  	    "Alacritty"
+  	]
+  },
+"cpu": {
+  "interval": 2,
+  "tooltip": true,
+	"format": " {usage}%",
+  "min-length": 6,
+},
+"temperature": {
+  "tooltip": true,
+  "min-length": 6,
+  "critical-threshold": 80,
+	"format": "{icon} {temperatureC}°C",
+	"format-critical": "{icon} {temperatureC}°C",
+  "format-icons": {
+  "default": ["", "", "", "", ""],
+  },
+},
+"memory": {
+  "tooltip": true,
+	"format": " {percentage}%",
+  "min-length": 6,
+},
+"sway/workspaces": {
+  "tooltip": true,
+  "disable-scroll": true,
+},
+"custom/cap-left": {
+  "tooltip": false,
+	"format": "[",
+},
+"custom/cap-right": {
+  "tooltip": false,
+	"format": "]",
+},
+}

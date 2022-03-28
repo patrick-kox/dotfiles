@@ -1,0 +1,23 @@
+[user]
+    name = 
+	email = 
+	signingkey = 
+
+[color]
+    ui = auto
+[merge]
+    conflictstyle = diff3
+
+[gpg]
+	program = gpg2
+[commit]
+	gpgsign = true
+[pull]
+	rebase = false
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[gc]
+	autoDetach = false

@@ -1,0 +1,110 @@
+! =================
+!      Rofi
+! =================
+rofi.color-enabled: true
+rofi.color-window: argb:c82d303b, #7c8389, #1d1f21
+rofi.color-normal: argb:313d306b, #c4cbd4, argb:96404552, #4084d6, #f9f9f9
+rofi.color-alternate: argb:312d2aab, #c4cbd4, argb:96404552, #4084d6, #f9f9f9
+rofi.color-urgent: argb:2c1d1f21, #cc6666, argb:e54b5160, #a54242, #f9f9f9
+rofi.color-active: argb:2c1d1f21, #65acff, argb:e44b5160, #4491ed, #f9f9f9
+rofi.width: 100
+rofi.lines: 3
+rofi.columns: 1
+rofi.font: System San Francisco Display 40
+rofi.bw: 0
+rofi.padding: 400
+rofi.eh: 1
+rofi.separator-style: dash
+rofi.hide-scrollbar: true
+rofi.fullscreen: true
+! =================
+!      RXVT
+! =================
+!! Colorscheme
+
+! special
+*.foreground: #93a1a1
+*.background: #141c21
+*.cursorColor: #afbfbf
+
+! black
+*.color0: #263640
+*.color8: #4a697d
+
+! red
+*.color1: #d12f2c
+*.color9: #fa3935
+
+! green
+*.color2: #819400
+*.color10: #a4bd00
+
+! yellow
+*.color3: #b08500
+*.color11: #d9a400
+
+! blue
+*.color4: #2587cc
+*.color12: #2ca2f5
+
+! magenta
+*.color5: #696ebf
+*.color13: #8086e8
+
+! cyan
+*.color6: #289c93
+*.color14: #33c5ba
+
+! white
+*.color7: #bfbaac
+*.color15: #fdf6e3
+
+! Dracula Xresources palette²
+!*.foreground: #F8F8F2
+!*.background: #282A36
+!*.color0:     #000000
+!*.color8:     #4D4D4D
+!*.color1:     #FF5555
+!*.color9:     #FF6E67
+!*.color2:     #50FA7B
+!*.color10:    #5AF78E
+!*.color3:     #F1FA8C
+!*.color11:    #F4F99D
+!*.color4:     #BD93F9
+!*.color12:    #CAA9FA
+!*.color5:     #FF79C6
+!*.color13:    #FF92D0
+!*.color6:     #8BE9FD
+!*.color14:    #9AEDFE
+!*.color7:     #BFBFBF
+!*.color15:    #E6E6E6
+
+!! URxvt Appearance
+URxvt*font: xft:MonoLisa-Regular:antialias=true:pixelsize=22
+URxvt*boldFont: xft:MonoLisa-Bold:style=bold:antialias=true:pixelsize=22
+URxvt.letterSpace: 0
+URxvt.lineSpace: 0
+URxvt.geometry: 92x24
+URxvt.internalBorder: 24
+URxvt.cursorBlink: true
+URxvt.cursorUnderline: false
+URxvt.saveline: 2048
+URxvt.scrollBar: false
+URxvt.scrollBar_right: false
+URxvt.urgentOnBell: true
+URxvt.depth: 32
+URxvt.background: rgba:1111/1111/1111/ff66
+URxvt.iso14755: false
+
+*.font: xft:System San Francisco Display:style=Regular:size=14
+*.boldFont: xft:System San Francisco Display:style=Bold:size=14
+*.italicFont: xft:System San Francisco Display:style=Italic:size=14
+*.boldItalicFont: xft:System San Francisco Display:style=Bold Italic:size=14
+
+! Fonts {{{
+Xft.antialias: true
+Xft.hinting:   true
+Xft.rgba:      rgb
+Xft.hintstyle: hintfull
+Xft.dpi:       140
+! }}}

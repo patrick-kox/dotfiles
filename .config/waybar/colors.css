@@ -1,0 +1,10 @@
+/* waybar color.css imported into style.css */
+
+@define-color bgcolor #D70A53;
+@define-color fgcolor #DDDDDD;
+@define-color hover #2d2d2d;
+@define-color charging #40d3ed;
+@define-color critical #ff0400;
+@define-color network #6666FF;
+@define-color clock #FFFF66;
+@define-color disk #CCCCCC;
